@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
 
 from home.models import Cv
 from . import forms
@@ -11,7 +12,7 @@ def index(request):
 def hire(request):
     return render(request, 'home/embaucher.html', {})
 def cv(request):
-    if request.method == "POST":
+    if request.method == "POST" and request.FILES['document']:
         username = request.POST.get('username')
         print(username)
         password = request.POST.get('password')
@@ -25,7 +26,10 @@ def cv(request):
         confirmemail = request.POST.get('confirmemail')
         category = request.POST.get('category')
         location = request.POST.get('location')
-        cv = request.POST.get('document')
+        
+        cv = request.FILES['document']
+        fs = FileSystemStorage()
+        filename = fs.save(cv.name, cv)
 
         canadanational = request.POST.get('canadanational')
 
