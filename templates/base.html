@@ -168,17 +168,19 @@
 									<a href="https://www.instagram.com/socialquantum/" target="_blank"><img src="{% static 'images/footer_instagram.png' %}" alt="" style="height: 33px;margin-bottom: 15px;"></a>
 									<div>
 
-												<a href="">&Agrave; propos de nous</a>
-								<a href="">Contactez-nous</a>
+												<a href="{% url 'home:propose' %}">&Agrave; propos de nous</a>
+								<a href="{% url 'home:contact' %}">Contactez-nous</a>
 								<a href="">Conditions d'utilisation</a>
 								<a href="">Accessibilit&eacute;</a>
+
 								<a target="_blank" href="http://www.alternacare.ca/">Alternacare</a>
 									</div>
 								</div>
 {% comment %} 								<a href="">&Agrave; propos de nous</a>
-								<a href="">Contactez-nous</a>
+								<a href="{% url 'home:contact' %}">Contactez-nous</a>
 								<a href="">Conditions d'utilisation</a>
 								<a href="">Accessibilit&eacute;</a>
+									<a href="">helo</a>
 								<a href="">Carri&egrave;res chez Quantum</a>
 								<a target="_blank" href="http://www.alternacare.ca/">Alternacare</a> {% endcomment %}
 							</div>

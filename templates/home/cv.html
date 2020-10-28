@@ -8,26 +8,26 @@
 
     <form  action="" method="post" enctype="multipart/form-data"> {% csrf_token %}
 
-        <h2 style=" font-weight: bold;">Inscrivez–vous chez Quantum</h2>
+        <h2 style=" font-weight: bold;">LE PLAISIR DE SOIGNER</h2>
   <div class="form-group">
-    <label  style=" margin: 0px 0px 0px 0px;">Username</label>
+    <label  style=" margin: 0px 0px 0px 0px;">Nom d'utilisateur</label>
     <input  class="form-control" style="width: 300px;" id="username" name="username" placeholder="Nom d&#39;utilisateur ">
 
           <div class="form-group">
-    <label  style=" margin: 0px 0px 0px 0px;">Password</label>
+    <label  style=" margin: 0px 0px 0px 0px;">Mot de passe</label>
     <input type="password" class="form-control" style="width: 300px; margin: 0px 0px 0px 0px; border:1px solid #333" id="password" name="password" placeholder="Mot de passe">
   </div>
           <div class="form-group">
-    <label  style=" margin: 0px 0px 0px 0px;">Confirm password</label>
+    <label  style=" margin: 0px 0px 0px 0px;">Confirmez le mot de passe</label>
     <input type="password" class="form-control" style="width: 300px; margin: 0px 0px 0px 0px; border:1px solid #333" id="confirmpassword" name="confirmpassword" placeholder="Confirmation de mot de passe">
   </div>
 
          <div class="form-group">
-    <label for="name" style=" margin: 0px 0px 0px 0px;">First name</label>
+    <label for="name" style=" margin: 0px 0px 0px 0px;">Prénom</label>
     <input class="form-control" style="width: 300px; margin: 0px 0px 0px 0px;" id="firstname" name="firstname" placeholder="Prénom">
   </div>
              <div class="form-group">
-    <label for="name" style=" margin: 0px 0px 0px 0px;">Last name</label>
+    <label for="name" style=" margin: 0px 0px 0px 0px;">nom de famille</label>
     <input  class="form-control" style="width: 300px;" id="lastname" name="lastname" placeholder="Nom de famille">
   </div>
 
@@ -37,9 +37,13 @@
   </div>
 
          <div class="form-group">
-    <label for="name" style=" margin: 0px 0px 0px 0px;">Confirm Email</label>
+    <label for="name" style=" margin: 0px 0px 0px 0px;">Confirmez votre e-mail</label>
+
+
     <input type="email" class="form-control" style="width: 300px;" id="confirmemail" name="confirmemail" placeholder="Confirmer le courriel">
   </div>
+   <label  style=" margin: 0px 0px 0px 0px;">Type d'emploi</label>
+      <br>
          <select id="category" name="category">
 		<option value="">Choisir une catégorie</option>
 		<option value="Soins de santé">Soins de santé</option>
@@ -48,22 +52,22 @@
              <option value="Préposés(ées) aux bénéficiaires">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Préposés(ées) aux bénéficiaires</option>
              <option value="Aide aux familles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Aide aux familles</option></select>
 
-        <br>
-         <br>
-        	<select name="location" id="location"  class="mr-2">
-		<option value="">Choisir un lieu</option>
-		<option value="Québec">Québec</option>
-                <option value="Québec et les environs">  Québec et les environs</option>
-                <option value="Montréal (Région de)">  Montréal (Région de)</option>
-                <option value="Montréal – Centre">  Montréal – Centre</option>
-                <option value="Montréal – Laval & Rive Nord">  Montréal – Laval & Rive Nord</option>
-                <option value="Montréal – Rive Sud">  Montréal – Rive Sud</option>
-                <option value="Montréal – Ouest de l'Île">  Montréal – Ouest de l'Île</option>
-                <option value="Montréal – Est">  Montréal – Est</option>
-                <option value="Montréal - St-Laurent">  Montréal - St-Laurent</option>
-                <option value="Blainville/Laval Rive Nord">  Blainville/Laval Rive Nord</option>
-                <option value="Gatineau et les environs">  Gatineau et les environs</option>
-                <option value="Ontario"></option></select>
+<!--        <br>-->
+<!--         <br>-->
+<!--        	<select name="location" id="location"  class="mr-2">-->
+<!--		<option value="">Choisir un lieu</option>-->
+<!--		<option value="Québec">Québec</option>-->
+<!--                <option value="Québec et les environs">  Québec et les environs</option>-->
+<!--                <option value="Montréal (Région de)">  Montréal (Région de)</option>-->
+<!--                <option value="Montréal – Centre">  Montréal – Centre</option>-->
+<!--                <option value="Montréal – Laval & Rive Nord">  Montréal – Laval & Rive Nord</option>-->
+<!--                <option value="Montréal – Rive Sud">  Montréal – Rive Sud</option>-->
+<!--                <option value="Montréal – Ouest de l'Île">  Montréal – Ouest de l'Île</option>-->
+<!--                <option value="Montréal – Est">  Montréal – Est</option>-->
+<!--                <option value="Montréal - St-Laurent">  Montréal - St-Laurent</option>-->
+<!--                <option value="Blainville/Laval Rive Nord">  Blainville/Laval Rive Nord</option>-->
+<!--                <option value="Gatineau et les environs">  Gatineau et les environs</option>-->
+<!--                <option value="Ontario"></option></select>-->
          <br>
          <br>
          <div class="float-left display-inline-block">
@@ -81,8 +85,10 @@
             <br>
 Avez-vous un numéro d'assurance sociale (NAS) ou un permis valide pour travailler au Canada?
             <br>
- <label class=""><input type="radio" id="yes" name="yes" checked>Yes</label>
-<label class=""><input type="radio" id="no" name="no">No</label>
+ <label class=""><input type="radio" id="yes" name="yes" checked>
+Oui</label>
+<label class=""><input type="radio" id="no" name="no">
+non</label>
 </div>
    <div class="float-left display-inline-block padding-top-5">
                     <span class="float-left" style="display:inline-block;width:22px;"><input id="ctl00_Main_CheckBoxAgreement" type="checkbox" name="ctl00$Main$CheckBoxAgreement" /></span>

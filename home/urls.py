@@ -12,4 +12,6 @@ urlpatterns = [
     path('embaucher/personnel', views.personal, name='personal'),
     path('travailler/', views.work, name='work'),
     path('centre-de-carriere/', views.career_center, name='career_center'),
+    path('contact/', views.contact, name='contact'),
+    path('propose/', views.propose, name='propose'),
 ]

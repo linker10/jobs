@@ -8,6 +8,10 @@ from . import forms
 
 def index(request):
     return render(request, 'home/index.html', {})
+def contact(request):
+    return render(request, 'home/contact.html', {})
+def propose(request):
+    return render(request, 'home/propose.html', {})
 
 def hire(request):
     return render(request, 'home/embaucher.html', {})
