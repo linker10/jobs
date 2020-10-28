@@ -147,7 +147,7 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'nwsmeme@gmail.com'
-EMAIL_HOST_PASSWORD = 'M0Tdepa55e@12'
+EMAIL_HOST_PASSWORD = 'aucuesmbumjygwis'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 ####################
